@@ -1,5 +1,4 @@
 import puppeteer, {PredefinedNetworkConditions, KnownDevices} from 'puppeteer';
-import log from '../utils/log.js';
 const {randomUUID} = await import('node:crypto');
 import loaf from './loaf.js';
 /**
@@ -97,7 +96,7 @@ async function tracing(config) {
     await browser.close();
     return traceFileName;
   } catch (error) {
-    log(error);
+    console.error(error);
     return undefined;
   }
 }

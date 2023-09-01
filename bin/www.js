@@ -1,7 +1,6 @@
 import 'dotenv/config';
 
 import app from '../server.js';
-import log from '../utils/log.js';
 import http from 'http';
 
 /**
@@ -82,5 +81,5 @@ function onListening() {
   const bind = typeof addr === 'string' ?
     'pipe ' + addr :
     'http://localhost:' + addr.port;
-  log('Listening on ' + bind);
+  console.log('Listening on ' + bind);
 }
